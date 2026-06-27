@@ -31,17 +31,17 @@ stages:
       size: 904
     params:
       params.yaml:
-        train.max_depth: 10
-        train.n_estimators: 100
+        train.max_depth: 15
+        train.n_estimators: 200
     outs:
     - path: metrics.json
       hash: md5
-      md5: 8b85cfdab9572ab464b1be79ba835f2d
-      size: 34
+      md5: d6098ff3f6dcb3bc3b1f09a6caf916c3
+      size: 28
     - path: models/model.pkl
       hash: md5
-      md5: dd3ba9df9482e26522a7b992059c9749
-      size: 1950813
+      md5: 1598141ddb62f7d422790e76678718ef
+      size: 6414493
   evaluate:
     cmd: python src/evaluate.py
     deps:
@@ -52,8 +52,8 @@ stages:
       nfiles: 2
     - path: models/model.pkl
       hash: md5
-      md5: dd3ba9df9482e26522a7b992059c9749
-      size: 1950813
+      md5: 1598141ddb62f7d422790e76678718ef
+      size: 6414493
     - path: src/evaluate.py
       hash: md5
       md5: c2d00413f3161d10712aba3002165962
@@ -61,9 +61,9 @@ stages:
     outs:
     - path: eval_metrics.json
       hash: md5
-      md5: 4ff7e8c80758d1c58b8e2c6e48ecdb2a
+      md5: 76f5a2a8352a0a7c6ec467e0005a4298
       size: 43
     - path: plots/roc.csv
       hash: md5
-      md5: 5da3957753ab6d005011f0feea5d0745
-      size: 4139
+      md5: c2fa16f18aa52b4f771f5dbf5a88ed61
+      size: 3293
