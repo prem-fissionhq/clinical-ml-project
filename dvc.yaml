@@ -1,0 +1,30 @@
+stages:
+  prepare:
+    cmd: python src/prepare.py
+    deps:
+    - data/patient_outcomes.csv
+    - src/prepare.py
+    outs:
+    - data/prepared/
+  train:
+    cmd: python src/train.py
+    deps:
+    - data/prepared/
+    - src/train.py
+    params:
+    - train.max_depth
+    - train.n_estimators
+    outs:
+    - models/model.pkl
+    metrics:
+    - metrics.json
+  evaluate:
+    cmd: python src/evaluate.py
+    deps:
+    - data/prepared/
+    - models/model.pkl
+    - src/evaluate.py
+    metrics:
+    - eval_metrics.json
+    plots:
+    - plots/roc.csv
