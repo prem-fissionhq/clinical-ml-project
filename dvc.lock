@@ -5,8 +5,8 @@ stages:
     deps:
     - path: data/patient_outcomes.csv
       hash: md5
-      md5: 287eea04191b6e30a2f5537df578b9d6
-      size: 22109
+      md5: d41d8cd98f00b204e9800998ecf8427e
+      size: 0
     - path: src/prepare.py
       hash: md5
       md5: 5a8e6d8bdd4e99ca2f437ea90f385032
@@ -14,16 +14,16 @@ stages:
     outs:
     - path: data/prepared/
       hash: md5
-      md5: 79fe7375020750e6dbb5a25ea562f3db.dir
-      size: 35108
+      md5: ad351bdfe7ee2f2209ace64d1b8af807.dir
+      size: 35106
       nfiles: 2
   train:
     cmd: python src/train.py
     deps:
     - path: data/prepared/
       hash: md5
-      md5: 79fe7375020750e6dbb5a25ea562f3db.dir
-      size: 35108
+      md5: ad351bdfe7ee2f2209ace64d1b8af807.dir
+      size: 35106
       nfiles: 2
     - path: src/train.py
       hash: md5
@@ -47,8 +47,8 @@ stages:
     deps:
     - path: data/prepared/
       hash: md5
-      md5: 79fe7375020750e6dbb5a25ea562f3db.dir
-      size: 35108
+      md5: ad351bdfe7ee2f2209ace64d1b8af807.dir
+      size: 35106
       nfiles: 2
     - path: models/model.pkl
       hash: md5
