@@ -14,21 +14,21 @@ stages:
     outs:
     - path: data/prepared/
       hash: md5
-      md5: bc51169c2ca70a92aa79f3148946ae4d.dir
-      size: 35108
-      nfiles: 2
+      md5: 4f6172951d7e9a038df6b8d7995422a2.dir
+      size: 5076127610
+      nfiles: 7
   train:
     cmd: python src/train.py
     deps:
     - path: data/prepared/
       hash: md5
-      md5: 79fe7375020750e6dbb5a25ea562f3db.dir
-      size: 35108
-      nfiles: 2
+      md5: 4f6172951d7e9a038df6b8d7995422a2.dir
+      size: 5076127610
+      nfiles: 7
     - path: src/train.py
       hash: md5
-      md5: 804bc5aaea364c4b0c6ae366d01a301a
-      size: 904
+      md5: 2ca7ccbad106b8fe2fa6c98d4c43da59
+      size: 920
     params:
       params.yaml:
         train.max_depth: 15
@@ -47,9 +47,9 @@ stages:
     deps:
     - path: data/prepared/
       hash: md5
-      md5: 79fe7375020750e6dbb5a25ea562f3db.dir
-      size: 35108
-      nfiles: 2
+      md5: 4f6172951d7e9a038df6b8d7995422a2.dir
+      size: 5076127610
+      nfiles: 7
     - path: models/model.pkl
       hash: md5
       md5: 1598141ddb62f7d422790e76678718ef
