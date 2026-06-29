@@ -14,7 +14,7 @@ stages:
     outs:
     - path: data/prepared/
       hash: md5
-      md5: 79fe7375020750e6dbb5a25ea562f3db.dir
+      md5: bc51169c2ca70a92aa79f3148946ae4d.dir
       size: 35108
       nfiles: 2
   train:
