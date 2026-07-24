@@ -14,16 +14,16 @@ stages:
     outs:
     - path: data/prepared/
       hash: md5
-      md5: bef39a41e5f18f3b14b2bfe52fa8ad77.dir
-      size: 10739511729
+      md5: 51836ce7a28ace40b7b4f8a466d6589f.dir
+      size: 10739511807
       nfiles: 10
   train:
     cmd: python src/train.py
     deps:
     - path: data/prepared/
       hash: md5
-      md5: bef39a41e5f18f3b14b2bfe52fa8ad77.dir
-      size: 10739511729
+      md5: 51836ce7a28ace40b7b4f8a466d6589f.dir
+      size: 10739511807
       nfiles: 10
     - path: src/train.py
       hash: md5
@@ -47,8 +47,8 @@ stages:
     deps:
     - path: data/prepared/
       hash: md5
-      md5: bef39a41e5f18f3b14b2bfe52fa8ad77.dir
-      size: 10739511729
+      md5: 51836ce7a28ace40b7b4f8a466d6589f.dir
+      size: 10739511807
       nfiles: 10
     - path: models/model.pkl
       hash: md5
