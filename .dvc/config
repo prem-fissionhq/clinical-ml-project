@@ -1,4 +1,7 @@
 [core]
     remote = storage
+[cache]
+    dir = /fsx/dvc-cache
+    type = hardlink
 ['remote "storage"']
     url = /fsx/clinical-ml
