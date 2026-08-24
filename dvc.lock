@@ -14,9 +14,11 @@ stages:
     outs:
     - path: data/prepared/
       hash: md5
-      md5: 79fe7375020750e6dbb5a25ea562f3db.dir
-      size: 35108
-      nfiles: 2
+      files:
+      - relpath: test.csv
+        md5: ac458c79b26d7c870d78f9c3d0d2e316
+      - relpath: train.csv
+        md5: 1b11a9553171825a04768bdb975194a2
   train:
     cmd: python src/train.py
     deps:
